@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import ImageModal from "../ImageModal/ImageModal";
-import LoadMoreButton from "../LoadMoreButton/LoadMoreButton";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 
 export default function App() {
   const [images, setPhotos] = useState([]);
@@ -75,7 +75,7 @@ export default function App() {
       )}
       {isLoading && <Loader />}
       {images.length > 0 && !isLoading && (
-        <LoadMoreButton onClick={handleLoadMore} />
+        <LoadMoreBtn onClick={handleLoadMore} />
       )}
       <ImageModal
         imageUrl={selectedImageUrl}
